@@ -1,3 +1,7 @@
-p {
-	color: red;
-}
+var(--darkbg, #000000)
+var(--darktext, #F3E9D3)
+var(--darkaccent, #79CDB1)
+var(--lightbg, #FDF6E3)
+var(--lighttext, #586E75)
+var(--lightaccent, #2AA198)
+
