@@ -1,7 +1,88 @@
-var(--darkbg, #000000)
-var(--darktext, #F3E9D3)
-var(--darkaccent, #79CDB1)
-var(--lightbg, #FDF6E3)
-var(--lighttext, #586E75)
-var(--lightaccent, #2AA198)
+:root {
+    --darkbg: #000000;
+    --darktext: #F3E9D3;
+    --accentcyan: #79CDB1;
+    --accentteal: #2AA198;
+    --accentviolet: #6c71c4;
+    --accentyellow: #b58900;
+    --accentgreen: #859900;
+    --medbg: #202020;
+    --lightbg: #FDF6E3;
+    --lighttext: #586E75;
+}
 
+body {
+    background-color: var(--darkbg);
+    color: var(--darktext);
+    font-family: sans-serif;
+}
+
+:visited {
+    color: var(--accentyellow);
+}
+:link {
+    color: var(--accentcyan);
+}
+:hover {
+    color: var(--accentteal);
+}
+
+nav :nth-child(2n) {
+    background-color: var(--medbg);
+}
+
+div p:first-child:first-letter {
+    font-size: 20px;
+    color: var(--accentgreen);
+}
+
+div p:first-child:first-line {
+    font-style: italic;
+}
+
+footer>p {
+    font-size: 14px;
+}
+
+hr {
+    color: var(--darktext);
+}
+
+h3+p {
+    padding-top: 8px;
+}
+
+section.location-card {
+    background-origin: content-box;
+    background-image: url("../images/beans.jpg");
+    border-color: var(--accentcyan);
+    border-radius: 30px;
+    border-style: solid; border-width: 2px 2px 2px 2px;
+    border-image: url("../images/bean.jpg") 30 round;
+    overflow: scroll;
+    width: 800px;
+    padding: 5px;
+    margin: 30px;
+}
+
+.location-card>p {
+    padding: 15px;
+    margin: 10px;
+    color: white;
+}
+.location-card>h3 {
+    padding: 10px;
+    margin: 10px;
+    color: white;
+}
+
+a[href$=".pdf"] {
+    background: url(../images/pdf_icon_orig.png) no-repeat left center;
+    background-size: 14px;
+    padding-left: 14px;
+}
+a[href$=".docx"] {
+    background: url(../images/docx_icon.png) no-repeat left center;
+    background-size: 14px;
+    padding-left: 14px;
+}
