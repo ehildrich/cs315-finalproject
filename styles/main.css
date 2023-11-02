@@ -11,24 +11,83 @@
     --lighttext: #586E75;
 }
 
-body {
-    background-color: var(--darkbg);
-    color: var(--darktext);
-    font-family: sans-serif;
+/* Header Styles */
+
+header {
+	text-align: center;
 }
+
+h1 {
+	font-weight: bold;
+	font-size: 3em;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 2em;
+	margin-top: 10%;
+}
+
+h3+p {
+    padding-top: 8px;
+}
+
+
+nav :nth-child(2n) {
+    background-color: var(--accentyellow);
+}
+
+nav ul {
+	font-size: 0.75em;
+	margin-left: 8%;
+	margin-right: 8%;
+	padding: 2.5em;
+}
+
+nav li {
+	background-color: var(--accentviolet);
+	display: inline-block;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+
+
+/* Link Styles */
 
 :visited {
     color: var(--accentyellow);
 }
-:link {
-    color: var(--accentcyan);
-}
-:hover {
+
+a {
     color: var(--accentteal);
 }
 
-nav :nth-child(2n) {
-    background-color: var(--medbg);
+:hover {
+    color: var(--accentcyan);
+}
+
+nav a {
+    color: var(--darkbg);
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+
+
+/* Content Styles */
+
+body {
+    background-color: var(--darkbg);
+    color: var(--darktext);
+    font-family: sans-serif;
+	margin-left: 8%;
+	margin-right: 8%;
+	padding: 3em;
+	border-radius: var(--border-curve);
 }
 
 div p:first-child:first-letter {
@@ -40,16 +99,8 @@ div p:first-child:first-line {
     font-style: italic;
 }
 
-footer>p {
-    font-size: 14px;
-}
-
 hr {
     color: var(--darktext);
-}
-
-h3+p {
-    padding-top: 8px;
 }
 
 section.location-card {
@@ -59,7 +110,6 @@ section.location-card {
     border-radius: 30px;
     border-style: solid; border-width: 2px 2px 2px 2px;
     border-image: url("../images/bean.jpg") 30 round;
-    overflow: scroll;
     width: 800px;
     padding: 5px;
     margin: 30px;
@@ -76,13 +126,10 @@ section.location-card {
     color: white;
 }
 
-a[href$=".pdf"] {
-    background: url(../images/pdf_icon_orig.png) no-repeat left center;
-    background-size: 14px;
-    padding-left: 14px;
-}
-a[href$=".docx"] {
-    background: url(../images/docx_icon.png) no-repeat left center;
-    background-size: 14px;
-    padding-left: 14px;
+
+
+/* Footer Styles */
+
+footer>p {
+    font-size: 14px;
 }
