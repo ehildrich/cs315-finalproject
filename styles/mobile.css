@@ -1,3 +1,41 @@
-p {
-	color: green;
+/* Header Styles */
+
+nav ul {
+	padding: 0.5em;
+}
+
+nav li {
+	padding-top: 5%;
+	padding-bottom: 5%;
+	width: 100%;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1em;
+}
+
+
+
+/* Content Styles */
+
+body {
+	padding: 1em;
+}
+
+section.location-card {
+    padding: 0.5%;
+    margin-bottom: 7%;
+}
+
+
+
+/* Image Styles */
+
+img+figcaption {
+	padding: 0.2em;
+	font-size: 0.75em; 
 }

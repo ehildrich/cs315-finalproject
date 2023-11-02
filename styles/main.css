@@ -17,17 +17,6 @@ header {
 	text-align: center;
 }
 
-h1 {
-	font-weight: bold;
-	font-size: 3em;
-}
-
-h3 {
-	font-weight: bold;
-	font-size: 2em;
-	margin-top: 10%;
-}
-
 h3+p {
     padding-top: 8px;
 }
@@ -41,16 +30,19 @@ nav ul {
 	font-size: 0.75em;
 	margin-left: 8%;
 	margin-right: 8%;
-	padding: 2.5em;
 }
 
 nav li {
 	background-color: var(--accentviolet);
 	display: inline-block;
-	padding-left: 1em;
-	padding-right: 1em;
-	padding-top: 2%;
-	padding-bottom: 2%;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h3 {
+	margin-top: 10%;
 }
 
 
@@ -86,8 +78,6 @@ body {
     font-family: sans-serif;
 	margin-left: 8%;
 	margin-right: 8%;
-	padding: 3em;
-	border-radius: var(--border-curve);
 }
 
 div p:first-child:first-letter {
@@ -110,9 +100,7 @@ section.location-card {
     border-radius: 30px;
     border-style: solid; border-width: 2px 2px 2px 2px;
     border-image: url("../images/bean.jpg") 30 round;
-    width: 800px;
-    padding: 5px;
-    margin: 30px;
+    max-width: 100%;
 }
 
 .location-card>p {
@@ -124,6 +112,23 @@ section.location-card {
     padding: 10px;
     margin: 10px;
     color: white;
+}
+
+
+
+/* Image Styles */
+
+figure {
+	padding: 0.5em;
+	border: solid 4px var(--accentyellow);
+}
+
+figure > img {
+	max-width: 100%;
+}
+
+img+figcaption {
+	font-style: italic; 
 }
 
 
