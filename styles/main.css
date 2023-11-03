@@ -131,6 +131,49 @@ img+figcaption {
 	font-style: italic; 
 }
 
+/* Form Styles */
+
+label {
+	font-size: 1.25em;
+	display: block;
+}
+
+form {
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+label {
+	padding-top: 2em;
+	padding-bottom: 1em;
+}
+
+form button {
+	border-radius: 0px;
+}
+
+form select {
+	padding: 0.5em;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+#submitBtn {
+	background-color: var(--accentteal);
+}
+
+#submitBtn:active {
+	background-color: var(--accentcyan);
+}
+	
+#resetBtn {
+	background-color: var(--accentyellow);
+}
+
+#resetBtn:active {
+	background-color: var(--accentgreen);
+}
+
 
 
 /* Footer Styles */
