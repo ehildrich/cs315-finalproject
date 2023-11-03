@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="../styles/main.css" />
 	<link rel="stylesheet" href="../styles/mobile.css" media="screen and (max-width:480px)" />
 	<link rel="stylesheet" href="../styles/desktop.css" media="screen and (min-width:481px)" />
+	<script src="../scripts/form.js"></script>
   </head>
 
   <body>
@@ -35,6 +36,10 @@
 	
 		<form>
 			<fieldset>
+				<section id="validationDiv" hidden >
+					<p>Validate</p>
+				</section>
+				
 				<legend>Survey</legend>
 				<label for="number">How many cups of coffee do you drink in an average week?</label>
 				<input type="text" id="number" />
@@ -58,14 +63,14 @@
 				</br>
 				
 				<label for="continent">Which continent produces your favorite coffee?</label>
-				<input type="radio" name="continent" value="">Africa</br>
-				<input type="radio" name="continent" value="">South/Central America</br>
-				<input type="radio" name="continent" value="">Asia
+				<input type="radio" name="continent" class="continentRadio" value="africa">Africa</br>
+				<input type="radio" name="continent" class="continentRadio" value="southCentralAmerica">South/Central America</br>
+				<input type="radio" name="continent" class="continentRadio" value="asia">Asia
 				
 				</br>
 				
 				<button type="reset" id="resetBtn">Reset</button>
-				<button type="submit" id="submitBtn">Submit</button>
+				<button type="button" id="submitBtn">Submit</button>
 			</fieldset>
 		</form>
 	</main>
