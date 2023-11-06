@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
 	// When submit button is clicked, get inputs and then validate them
-	const validation = document.getElementById("validationDiv");
+	document.getElementById("submitBtn").addEventListener("click", submitHandler );  
 	
-	document.getElementById("submitBtn").addEventListener("click", () => {
-		inputs = getFormInputs();
-		fieldsValid = validateInputs(inputs);
-	});
+	if (localStorage.getItem("recentInputs")) {
+		document.getElementById("recentInputs").textContent = localStorage.getItem("recentInputs");
+	}
 });
 
 // Grabs the values from the form fields. No validation is done at this point. 
@@ -28,9 +27,35 @@ function getFormInputs() {
 	return inputs;
 }
 
-// Validates the form items. 
 function validateInputs(inputs) {
 	if (inputs.cups === "") {
-		console.log("no cups entered");
+		return "You must enter a number of cups.";
+	} else if (isNaN(inputs.cups)) {
+		return "Cups must be a valid number.";
+	}  else if (inputs.flavor === "") {
+		return "You must choose a favorite flavor.";
+	} else if (inputs.continent === "") {
+		return "You must choose a continent.";
 	}
+	
+	return "";
+}
+
+function submitHandler(e) {
+	const validation = document.getElementById("validationDiv");
+	validation.textContent = "";
+	const inputs = getFormInputs();
+	
+	validateString = validateInputs(inputs)
+	if (validateString !== "") {
+		validation.textContent = validateString;
+		return;
+	} else {
+		const inputJSON = JSON.stringify(inputs);
+		console.log(inputJSON);
+		localStorage.setItem("recentInputs", inputJSON);
+		validation.textContent = "Submission successful.";
+	}
+	
+	
 }
