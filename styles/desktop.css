@@ -42,12 +42,21 @@ img+figcaption {
 
 /* Form Styles */
 
+form {
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas: "l l . ."
+						"fs fs para para"
+						"fs fs rec rec"
+						"fs fs . ."
+						"fs fs sb rb";
+	gap: 2em;
+}
+
 button {
 	padding: 0.5em;
 	margin-top: 5%;
 	margin-bottom: 1%;
 	border-radius: 0px;
-	width: 20%;
 	border: 0px;
 }
 

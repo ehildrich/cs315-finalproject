@@ -133,23 +133,35 @@ img+figcaption {
 
 /* Form Styles */
 
-label {
-	font-size: 1.25em;
-	display: block;
-}
-
 form {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas: "l l . ."
+						"fs fs para para"
+						"fs fs rec rec"
+						"fs fs . ."
+						"fs fs sb rb";
 	margin-left: 2%;
 	margin-right: 2%;
 }
 
+.l { grid-area: l; }
+.fs { grid-area: fs; }
+.para { grid-area: para; }
+.rec { grid-area: rec; }
+.sb { grid-area: sb; }
+.rb { grid-area: rb; }
+
 label {
 	padding-top: 2em;
 	padding-bottom: 1em;
+	font-size: 1.25em;
+	display: block;
 }
 
 form button {
 	border-radius: 0px;
+	width: 100%;
 }
 
 form select {

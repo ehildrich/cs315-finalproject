@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function getFormInputs() {
 	// Create an object and add each value from the form to it
 	const inputs = {};
-	inputs.cups = document.getElementById("number").value;
+	inputs.cups = document.getElementById("number").value.trim();
 	inputs.flavor = document.getElementById("flavor").value;
 	
 	// Roll through the radio buttons to find the one that was selected.
@@ -42,13 +42,18 @@ function validateInputs(inputs) {
 }
 
 function submitHandler(e) {
+	
+	const submitBtn = document.getElementById("submitBtn");
+	submitBtn.disabled = true;
 	const validation = document.getElementById("validationDiv");
 	validation.textContent = "";
+	
 	const inputs = getFormInputs();
 	
 	validateString = validateInputs(inputs)
 	if (validateString !== "") {
 		validation.textContent = validateString;
+		submitBtn.disabled = false;
 		return;
 	} else {
 		const inputJSON = JSON.stringify(inputs);
@@ -56,6 +61,5 @@ function submitHandler(e) {
 		localStorage.setItem("recentInputs", inputJSON);
 		validation.textContent = "Submission successful.";
 	}
-	
-	
+	submitBtn.disabled = false;
 }

@@ -44,12 +44,22 @@ img+figcaption {
 
 /* Form Styles */
 
+form {
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas: "l"
+						"para"
+						"rec"
+						"fs"
+						"sb"
+						"rb";
+	gap: 1em;
+}
+
 button {
 	padding: 1em;
 	margin-top: 8%;
 	margin-bottom: 3%;
 	border-radius: 0px;
-	width: 100%;
 	border: 0px;
 }
 
