@@ -131,6 +131,8 @@ img+figcaption {
 	font-style: italic; 
 }
 
+
+
 /* Form Styles */
 
 form {
@@ -184,6 +186,29 @@ form select {
 
 #resetBtn:active {
 	background-color: var(--accentgreen);
+}
+
+
+
+/* Table Styles */
+table {
+	border: solid var(--accentyellow) 3px;
+	border-collapse: collapse;
+	background-color: var(--medbg);
+}
+
+td {
+	border: solid var(--accentyellow) 1px;
+	padding: 1em;
+}
+
+th {
+	font-weight: bold;
+	padding: 1.5em;
+}
+
+tbody tr:hover {
+	background-color: var(--darkbg);
 }
 
 
