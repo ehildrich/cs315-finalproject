@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="../styles/mobile.css" media="screen and (max-width:480px)" />
 	<link rel="stylesheet" href="../styles/desktop.css" media="screen and (min-width:481px)" />
 	<script src="../scripts/form.js"></script>
+	<script src="../scripts/menu.js"></script>
   </head>
 
   <body>
@@ -26,7 +27,14 @@
 			<li><a href="./survey.html">Survey</a></li>
 			<li><a href="./drinks.html">Beverages</a></li>
 			<li><a href="./drinks2.html">More Beverages</a></li>
-			<li><a href="./blog.html">Blog</a></li>
+			<li><a href="./blog.html">Blog</a>
+				<div id="dropDown">&#8650;
+					<ul id="dropDownContent" class="close" >
+						<li><a href="./posts/blonde.html">Blonde</a></li>
+						<li><a href="./posts/oddly.html">Dukamo</a></li>
+					</ul>
+				</div>
+			</li>
 		</ul>
       </nav>
     </header>

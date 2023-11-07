@@ -10,6 +10,15 @@ nav li {
 	width: 100%;
 }
 
+#dropDownContent {
+	text-shadow: 0 0;
+}
+
+#dropDownContent li {
+	background-color: var(--accentviolet);
+	margin: 1%;
+}
+
 h1 {
 	font-size: 2em;
 }

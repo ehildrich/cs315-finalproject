@@ -37,6 +37,22 @@ nav li {
 	display: inline-block;
 }
 
+#dropDown {
+	position: relative;
+	display: inline;
+	padding: 0.5em;
+	text-shadow: -0.05em -0.05em 0;
+	color: var(--darkbg);
+}
+
+.open {
+	display: block;
+}
+
+.close {
+	display: none;
+}
+
 h1 {
 	font-size: 3em;
 }

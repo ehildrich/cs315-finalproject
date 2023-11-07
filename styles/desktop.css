@@ -11,6 +11,17 @@ nav li {
 	padding-bottom: 2%;
 }
 
+#dropDownContent {
+	text-shadow: 0 0;
+	position: absolute;
+	left: -8.9em;
+}
+
+#dropDownContent li {
+	width: 100%;
+	padding: 1em;
+}
+
 h1 {
 	font-size: 3em;
 }
