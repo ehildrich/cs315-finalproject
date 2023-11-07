@@ -2,8 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	// When submit button is clicked, get inputs and then validate them
 	document.getElementById("submitBtn").addEventListener("click", submitHandler );  
 	
+	// Check the local storage to see if the form has been submitted before.
+	// If so, display it. 
 	if (localStorage.getItem("recentInputs")) {
-		document.getElementById("recentInputs").textContent = localStorage.getItem("recentInputs");
+		displayRecentInputs();
 	}
 });
 
@@ -27,6 +29,7 @@ function getFormInputs() {
 	return inputs;
 }
 
+// Checks the inputs and returns a string describing first issue found. 
 function validateInputs(inputs) {
 	if (inputs.cups === "") {
 		return "You must enter a number of cups.";
@@ -38,19 +41,33 @@ function validateInputs(inputs) {
 		return "You must choose a continent.";
 	}
 	
+	// If no issues, return. 
 	return "";
+}
+
+// Displays the most recent form submission on the screen. 
+function displayRecentInputs() {
+	document.getElementById("recentInputs").textContent = localStorage.getItem("recentInputs");
 }
 
 function submitHandler(e) {
 	
+	// Disable the submit button. 
 	const submitBtn = document.getElementById("submitBtn");
 	submitBtn.disabled = true;
+	
+	// Clear the field that displays errors. 
 	const validation = document.getElementById("validationDiv");
 	validation.textContent = "";
 	
+	// Get the inputs. 
 	const inputs = getFormInputs();
 	
-	validateString = validateInputs(inputs)
+	// Validate the inputs. 
+	validateString = validateInputs(inputs);
+	
+	// If there was an error, display it and return. Otherwise, send the inputs 
+	// to local storage and display them and a success message on the screen. 
 	if (validateString !== "") {
 		validation.textContent = validateString;
 		submitBtn.disabled = false;
@@ -59,7 +76,10 @@ function submitHandler(e) {
 		const inputJSON = JSON.stringify(inputs);
 		console.log(inputJSON);
 		localStorage.setItem("recentInputs", inputJSON);
+		displayRecentInputs();
 		validation.textContent = "Submission successful.";
 	}
+	
+	// Re-enable the submit button. 
 	submitBtn.disabled = false;
 }
