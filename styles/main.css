@@ -11,6 +11,15 @@
     --lighttext: #586E75;
 }
 
+/* Animations and Transitions */
+@keyframes glow-pulse {
+	25% {box-shadow: 5px 5px 5px var(--accentgreen);}
+	75% {box-shadow: 5px 5px 5px var(--accentcyan);}
+}
+@keyframes fade-out {
+	from {color: var(--darktext);}
+	to {color: var(--darkbg);}
+
 /* Header Styles */
 
 header {
@@ -190,6 +199,9 @@ form select {
 
 #submitBtn {
 	background-color: var(--accentteal);
+	animation-name: glow-pulse;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
 }
 
 #submitBtn:active {
@@ -234,3 +246,5 @@ tbody tr:hover {
 footer>p {
     font-size: 14px;
 }
+
+
