@@ -16,9 +16,9 @@
 	25% {box-shadow: 5px 5px 5px var(--accentgreen);}
 	75% {box-shadow: 5px 5px 5px var(--accentcyan);}
 }
-@keyframes fade-out {
-	from {color: var(--darktext);}
-	to {color: var(--darkbg);}
+@keyframes glow-pulse-less {
+	25% {box-shadow: 3px 3px 3px var(--accentgreen);}
+	75% {box-shadow: 3px 3px 3px var(--accentcyan);}
 }
 
 /* Header Styles */
@@ -219,6 +219,9 @@ form select {
 	
 #resetBtn {
 	background-color: var(--accentyellow);
+	animation-name: glow-pulse-less;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
 }
 
 #resetBtn:active {
