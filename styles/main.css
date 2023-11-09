@@ -80,6 +80,7 @@ h3 {
 
 a {
     color: var(--accentteal);
+    transition: color 1s ease;
 }
 
 :hover {
@@ -87,6 +88,13 @@ a {
 }
 
 nav a {
+    color: var(--darkbg);
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+nav a:visited {
     color: var(--darkbg);
 	text-decoration: none;
 	font-weight: bold;
@@ -246,5 +254,3 @@ tbody tr:hover {
 footer>p {
     font-size: 14px;
 }
-
-
