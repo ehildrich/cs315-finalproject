@@ -19,6 +19,7 @@
 @keyframes fade-out {
 	from {color: var(--darktext);}
 	to {color: var(--darkbg);}
+}
 
 /* Header Styles */
 
